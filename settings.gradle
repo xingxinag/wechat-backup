@@ -1,1 +1,4 @@
-   include ':MyXposedModule'
+include ':MyXposedModule'
+repositories {
+    maven { url 'https://api.xposed.info/' }
+}
