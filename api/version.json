@@ -1,17 +1,7 @@
 {
-  "latest": {
-    "versionCode": 2,
-    "versionName": "1.1.0",
-    "url": "https://github.com/your-username/your-repo/releases/download/v1.1.0/app-release.apk",
-    "changelog": "• 新增手动恢复功能\n• 优化备份速度\n• 修复已知问题",
-    "forceUpdate": false,
-    "minSupport": "1.0.0"
-  },
-  "versions": [
-    {
-      "versionCode": 1,
-      "versionName": "1.0.0",
-      "date": "2024-01-01"
-    }
-  ]
-}
+  "versionCode": 1,
+  "versionName": "1.0.0",
+  "minSupportVersion": 1,
+  "url": "https://github.com/xingxinag/wechat-backup/releases/latest/download/app-release-signed.apk",
+  "changelog": "首次发布"
+} 

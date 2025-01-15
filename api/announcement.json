@@ -1,25 +1,15 @@
 {
   "announcements": [
     {
-      "id": 3,
-      "title": "版本更新 1.1.0",
-      "content": "• 新增手动恢复功能\n• 优化备份速度\n• 修复已知问题",
+      "id": 1,
+      "title": "测试公告",
+      "content": "GitHub Pages部署测试",
       "date": "2024-01-25",
-      "important": true,
-      "minVersion": "1.0.0",
-      "maxVersion": "1.1.0"
-    },
-    {
-      "id": 2,
-      "title": "使用提醒",
-      "content": "请在备份前确保微信已正确退出",
-      "date": "2024-01-20",
-      "important": true,
-      "minVersion": "1.0.0"
+      "important": true
     }
   ],
   "settings": {
-    "checkInterval": 3600,  // 检查更新间隔（秒）
-    "forceUpdate": false    // 是否强制更新
+    "checkInterval": 3600,
+    "forceUpdate": false
   }
-}
+} 
