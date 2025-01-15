@@ -22,12 +22,15 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class BackupManager {
     private static final String BACKUP_FOLDER = "WeChat_Backup";
     private static final String BACKUP_PREFIX = "wechat_backup_";
     private static final SimpleDateFormat DATE_FORMAT = 
         new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
+    private static ExecutorService executor = Executors.newFixedThreadPool(2);
 
     public interface BackupCallback {
         void onProgress(int progress, String message);
@@ -36,7 +39,7 @@ public class BackupManager {
     }
 
     public static void backup(Context context, BackupOptionsDialog.BackupOptions options, BackupCallback callback) {
-        new Thread(() -> {
+        executor.execute(() -> {
             try {
                 callback.onProgress(0, "准备备份...");
                 
@@ -82,7 +85,7 @@ public class BackupManager {
                 Logger.e("Backup failed", e);
                 callback.onError("备份失败: " + e.getMessage());
             }
-        }).start();
+        });
     }
 
     public static void restore(Context context, Uri source, RestoreOptionsDialog.RestoreOptions options, BackupCallback callback) {
