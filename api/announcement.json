@@ -1,0 +1,15 @@
+{
+  "announcements": [
+    {
+      "id": 1,
+      "title": "测试公告",
+      "content": "GitHub Pages部署测试",
+      "date": "2024-01-25",
+      "important": true
+    }
+  ],
+  "settings": {
+    "checkInterval": 3600,
+    "forceUpdate": false
+  }
+} 

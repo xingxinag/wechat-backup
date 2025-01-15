@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微信数据备份模块 - 官方网站</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #2196F3;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            margin-top: 10px;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .announcement {
+            border-left: 4px solid #2196F3;
+            padding-left: 15px;
+        }
+        
+        .important {
+            border-left-color: #f44336;
+        }
+        
+        .version {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background-color: #2196F3;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        
+        .download-btn:hover {
+            background-color: #1976D2;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 20px 0;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>微信数据备份模块</h1>
+            <div class="subtitle">安全、便捷的微信数据备份解决方案</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>最新版本</h2>
+            <div class="version">当前版本：v1.1.0 (2024-01-25)</div>
+            <p>新版本特性：</p>
+            <ul>
+                <li>新增手动恢复功能</li>
+                <li>优化备份速度</li>
+                <li>修复已知问题</li>
+            </ul>
+            <a href="#" class="download-btn">下载最新版本</a>
+        </div>
+
+        <div class="card">
+            <h2>最新公告</h2>
+            <div class="announcement important">
+                <h3>重要提醒</h3>
+                <p>使用前请务必：</p>
+                <ul>
+                    <li>仔细阅读使用说明</li>
+                    <li>备份重要数据</li>
+                    <li>确保微信已正确退出</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>使用说明</h2>
+            <p>1. 安装模块</p>
+            <ul>
+                <li>下载并安装最新版本</li>
+                <li>在LSPosed管理器中启用模块</li>
+                <li>勾选微信应用</li>
+            </ul>
+            
+            <p>2. 备份数据</p>
+            <ul>
+                <li>打开模块</li>
+                <li>点击"备份"按钮</li>
+                <li>等待备份完成</li>
+            </ul>
+            
+            <p>3. 恢复数据</p>
+            <ul>
+                <li>确保微信已关闭</li>
+                <li>选择备份文件</li>
+                <li>点击"恢复"按钮</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>常见问题</h2>
+            <p><strong>Q: 支持哪些版本的微信？</strong></p>
+            <p>A: 支持微信 8.0.0 及以上版本</p>
+            
+            <p><strong>Q: 需要root权限吗？</strong></p>
+            <p>A: 需要，且需要安装LSPosed框架</p>
+            
+            <p><strong>Q: 备份文件保存在哪里？</strong></p>
+            <p>A: 默认保存在内部存储的WeChat_backup目录下</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Copyright © 2024 微信数据备份模块</p>
+            <p>
+                <a href="https://github.com/your-username/wechat-backup-announcements">GitHub</a> |
+                <a href="privacy.html">隐私政策</a> |
+                <a href="terms.html">使用条款</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // 动态加载公告
+        fetch('/api/announcement.json')
+            .then(response => response.json())
+            .then(data => {
+                // 处理公告数据
+                const announcements = data.announcements;
+                if (announcements && announcements.length > 0) {
+                    // 更新公告内容
+                }
+            })
+            .catch(error => console.error('Error loading announcements:', error));
+
+        // 检查更新
+        fetch('/api/version.json')
+            .then(response => response.json())
+            .then(data => {
+                // 处理版本信息
+                const latest = data.latest;
+                if (latest) {
+                    document.querySelector('.version').textContent = 
+                        `当前版本：v${latest.versionName} (${latest.date})`;
+                    // 更新下载链接
+                    document.querySelector('.download-btn').href = latest.url;
+                }
+            })
+            .catch(error => console.error('Error loading version info:', error));
+    </script>
+</body>
+</html> 
