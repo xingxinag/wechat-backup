@@ -1,14 +1,36 @@
 apply plugin: 'com.android.application'
 
 android {
-    // ...
+    compileSdkVersion 33
+    
+    defaultConfig {
+        applicationId "com.example.myxposedmodule"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+    }
     
     buildTypes {
         debug {
-            // debug 构建类型的配置
+            debuggable true
         }
         release {
-            // release 构建类型的配置 
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    compileOnly 'de.robv.android.xposed:api:82'
+    compileOnly 'de.robv.android.xposed:api:82:sources'
+    
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
 } 
