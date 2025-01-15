@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="备份文件加密方式"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/encryption_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radio_none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未加密"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radio_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="密码加密"/>
+
+        <RadioButton
+            android:id="@+id/radio_aes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AES加密"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入解密密码"
+        android:inputType="textPassword"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout> 

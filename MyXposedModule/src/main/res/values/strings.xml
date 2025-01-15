@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">微信数据备份</string>
+    <string name="update_url">https://xingxinag.github.io/wechat-backup</string>
+    <string name="github_url">https://github.com/xingxinag/wechat-backup</string>
+    <string name="module_description">安全、便捷的微信数据备份解决方案</string>
+</resources> 
